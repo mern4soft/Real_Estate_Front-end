@@ -39,9 +39,9 @@ function AgentProperty() {
     const fetchData = async () => {
       try {
 
-        let getProperty = await axios.get('http://localhost:3001/createtypeofprop')
+        let getProperty = await axios.get('https://real-estate-backend-1-6bdi.onrender.com/createtypeofprop')
         setData(getProperty.data)
-        let getPropertyofAgent = await axios.get(`http://localhost:3001/property/${id}`)
+        let getPropertyofAgent = await axios.get(`https://real-estate-backend-1-6bdi.onrender.com/property/${id}`)
         setData2(getPropertyofAgent.data)
 
 
@@ -75,11 +75,11 @@ function AgentProperty() {
     try {
       
       if (!propertyData._id) {
-        const submit = await axios.post('http://localhost:3001/createtypeofprop', propertyData);
+        const submit = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/createtypeofprop', propertyData);
         console.log(submit);
       } else {
         
-        const update = await axios.put(`http://localhost:3001/createtypeofprop/${propertyData._id}`, propertyData);
+        const update = await axios.put(`https://real-estate-backend-1-6bdi.onrender.com/createtypeofprop/${propertyData._id}`, propertyData);
         console.log(update);
       }
 
@@ -94,7 +94,7 @@ function AgentProperty() {
   const handleDelete = async(item) =>{
     try {
 
-      let response =  await axios.delete(`http://localhost:3001/createtypeofprop/${item._id}`)
+      let response =  await axios.delete(`https://real-estate-backend-1-6bdi.onrender.com/createtypeofprop/${item._id}`)
       console.log(response.data);
       
     } catch (error) {

@@ -12,7 +12,7 @@ function Agentregister() {
 
       
 
-      let response = await axios.post('http://localhost:3001/agent/register', { ...data, isAgent: "true" })
+      let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/agent/register', { ...data, isAgent: "true" })
       console.log(response.data);
 
     } catch (error) {

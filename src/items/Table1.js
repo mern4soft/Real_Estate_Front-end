@@ -77,7 +77,7 @@ const handleInputChange = (e) => {
 const handleSubmit = async () => {
   try {
 
-    const response = await axios.post('http://localhost:3001/createtypeofprop', propertyData);
+    const response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/createtypeofprop', propertyData);
     console.log('API Response:', response.data);
     handleOpen();
   

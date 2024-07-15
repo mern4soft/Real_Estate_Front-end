@@ -14,7 +14,7 @@ function Login() {
 
         
 
-            let response = await axios.post('http://localhost:3001/agent/login', data)
+            let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/agent/login', data)
             let userId = response.data._id
             localStorage.setItem('userId', userId)
             navigate('/agent/property')
