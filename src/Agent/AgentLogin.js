@@ -14,7 +14,7 @@ function AgentLogin() {
 
         
 
-            let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/agent/login', {...data,isAgent:"true"})
+            let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/api/agent/login', {...data,isAgent:"true"})
             let userId = response.data.Agent._id
             let token = response.data.Token
             console.log(userId,token);

@@ -8,7 +8,7 @@ const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = async (data) => {
     try {
 
-      let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/user/signup', { ...data, isUser: "true" })
+      let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/api/user/signup', { ...data, isUser: "true" })
       console.log(response.data);
 
     } catch (error) {

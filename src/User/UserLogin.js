@@ -14,7 +14,7 @@ function UserLogin() {
 
 
 
-            let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/user/login', { ...data, isUser: "true" })
+            let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/api/user/login', { ...data, isUser: "true" })
             let userId = response.data._id
             localStorage.setItem('userId', userId)
             navigate('/user/dashboard')

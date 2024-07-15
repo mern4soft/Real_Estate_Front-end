@@ -16,7 +16,7 @@ function AdminLogin() {
 
         
 
-            let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/admin/login',{...data,isAdmin:"true"}, )
+            let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/api/admin/login',{...data,isAdmin:"true"}, )
             let userId = response.data._id
             localStorage.setItem('userId', userId)
             navigate('/admin/dashboard')

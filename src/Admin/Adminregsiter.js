@@ -7,7 +7,7 @@ function Adminregister() {
 
   const onSubmit = async (data) => {
     try {
-      let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/admin/signup', { ...data, isAdmin: "true" })
+      let response = await axios.post('https://real-estate-backend-1-6bdi.onrender.com/api/admin/register', { ...data, isAdmin: "true" })
       console.log(response.data);
     } catch (error) {
       console.log(error);
