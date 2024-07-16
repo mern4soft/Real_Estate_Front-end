@@ -3,13 +3,11 @@ import {
     Typography,
     List,
     ListItem,
-    ListItemPrefix,
-    ListItemSuffix,
-    Chip,
+    ListItemPrefix
 } from "@material-tailwind/react";
 
 import { Link } from "react-router-dom";
-import { MdDashboard } from "react-icons/md";
+// import { MdDashboard } from "react-icons/md";
 
 export default function Sidebar({ SidebarData }) {
     return (

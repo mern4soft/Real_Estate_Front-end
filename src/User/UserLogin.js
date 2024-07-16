@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -29,24 +29,27 @@ function UserLogin() {
 
 
     return (
-        <>
-
-            <h1>
-                User Login
-            </h1>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <label>Email</label>
-                <input type="email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
-                {errors.email && <p>Email is required and must be valid</p>}
-
-                <label>Password</label>
-                <input type="password" {...register("password", { required: true })} />
-                {errors.password && <p>Password is required</p>}
-
-                <button type="submit">Submit</button>
-                <Link to='/user/register'><p>their is no account?</p></Link>
-            </form>
-        </>
+        <div className='bg-cover h-screen w-screen flex justify-center items-center' style={{ backgroundImage: `url('https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg')` }}>
+            <div className='backdrop-grayscale-0 bg-white/75 shadow-2xl  w-[300px] p-6 rounded-md'>
+                <h1 className='text-center text-2xl font-bold mb-4'>User Login</h1>
+                <form className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
+                    <div className='mb-4'>
+                        <label>Email</label>
+                        <input type="email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} className='w-full p-2 rounded' />
+                        {errors.email && <p className='text-red-500 text-sm'>Email is required and must be valid</p>}
+                    </div>
+                    <div className='mb-4'>
+                        <label>Password</label>
+                        <input type="password" {...register("password", { required: true })} className='w-full p-2 rounded' />
+                        {errors.password && <p className='text-red-500 text-sm'>Password is required</p>}
+                    </div>
+                    <div className='flex flex-col items-center'>
+                        <button type="submit" className='bg-blue-500 text-white p-2 rounded mb-2'>Submit</button>
+                        <Link to='/user/register'><p className='text-blue-500'>There is no account?</p></Link>
+                    </div>
+                </form>
+            </div>
+        </div>
     )
 }
 

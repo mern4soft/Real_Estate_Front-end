@@ -1,22 +1,23 @@
 import React from 'react'
-
 import Nav from '../items/Navbar'
 import { Link } from 'react-router-dom'
 import { Button } from '@material-tailwind/react'
+import './Land.css'
 
 function Landing() {
 
 
 
   return (
-    <div>
-      <Nav  />
+    <div className='hello ' >
+      <Nav/>
+     
 
-      <Link to='/admin/login'><Button>Admin Login</Button></Link>
-      
-      <Link to='/agent/login'><Button>Agent Login</Button></Link>
-      
-      <Link to='/user/login'><Button>User Login</Button></Link>
+      <div className=''>
+      <h1>Hellow orld</h1>
+
+      </div>
+
 
       
       

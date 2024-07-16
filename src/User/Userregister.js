@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 function Userregister() {
 const { register, handleSubmit, formState: { errors } } = useForm();
@@ -17,34 +18,52 @@ const { register, handleSubmit, formState: { errors } } = useForm();
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="name">Name</label>
-        <input type="text" {...register("name", { required: true })} id="name" />
-        {errors.name && <span>This field is required</span>}
-
-        <label htmlFor="email">Email</label>
-        <input type="text" {...register("email", { required: true })} id="email" />
-        {errors.email && <span>Please enter a valid email address</span>}
-
-        <label htmlFor="age">Age</label>
-        <input type="text" {...register("age", { required: true })} id="age" />
-        {errors.age && <span>Please enter a valid age</span>}
-
-        <label htmlFor="password">Password</label>
-        <input type="text" {...register("password", { required: true })} id="password" />
-        {errors.password && <span>This field is required</span>}
-
-        <label htmlFor="place">Place</label>
-        <input type="text" {...register("place", { required: true })} id="place" />
-        {errors.place && <span>This field is required</span>}
-
-        <label htmlFor="number">Number</label>
-        <input type="text" {...register("number", { required: true })} id="number" />
-        {errors.number && <span>Please enter a valid number</span>}
-
-        <button type="submit">Submit</button>
+    <div className='bg-cover h-screen w-screen flex justify-center items-center' style={{ backgroundImage: `url('https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg')` }}>
+    <div className='backdrop-grayscale-0 bg-white/75 shadow-2xl w-full max-w-lg p-6 rounded-md'>
+      <h1 className='text-center text-2xl font-bold mb-4'>User Register</h1>
+      <form className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
+        <div className='flex flex-col md:flex-row md:gap-10'>
+          <div className='mb-4 w-full'>
+            <label htmlFor="name">Name</label>
+            <input type="text" {...register("name", { required: true })} id="name" className='w-full p-2 rounded' />
+            {errors.name && <p className='text-red-500 text-sm'>This field is required</p>}
+          </div>
+          <div className='mb-4 w-full'>
+            <label htmlFor="email">Email</label>
+            <input type="email" {...register("email", { required: true })} id="email" className='w-full p-2 rounded' />
+            {errors.email && <p className='text-red-500 text-sm'>Please enter a valid email address</p>}
+          </div>
+        </div>
+        <div className='flex flex-col md:flex-row md:gap-10'>
+          <div className='mb-4 w-full md:w-1/2'>
+            <label htmlFor="password">Password</label>
+            <input type="password" {...register("password", { required: true })} id="password" className='w-full p-2 rounded' />
+            {errors.password && <p className='text-red-500 text-sm'>This field is required</p>}
+          </div>
+          <div className='mb-4 w-full md:w-1/2'>
+            <label htmlFor="age">Age</label>
+            <input type="number" {...register("age", { required: true })} id="age" className='w-full p-2 rounded' />
+            {errors.age && <p className='text-red-500 text-sm'>Please enter a valid age</p>}
+          </div>
+        </div>
+        {/* <div className='flex flex-col md:flex-row md:gap-10'>
+          <div className='mb-4 w-full md:w-1/2'>
+            <label htmlFor="number">Number</label>
+            <input type="text" {...register("number", { required: true })} id="number" className='w-full p-2 rounded' />
+            {errors.number && <p className='text-red-500 text-sm'>Please enter a valid number</p>}
+          </div>
+          <div className='mb-4 w-full md:w-1/2'>
+            <label htmlFor="place">Place</label>
+            <input type="text" {...register("occupation", { required: true })} id="place" className='w-full p-2 rounded' />
+            {errors.occupation && <p className='text-red-500 text-sm'>This field is required</p>}
+          </div>
+        </div> */}
+        <div className='flex flex-col items-center'>
+          <button type="submit" className='bg-blue-500 text-white p-2 rounded mb-2 w-full md:w-auto'>Submit</button>
+          <Link to='/somepath'><p className='text-blue-500'>Have an account? Login</p></Link>
+        </div>
       </form>
+    </div>
     </div>
   );
 }
