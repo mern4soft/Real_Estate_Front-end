@@ -47,7 +47,7 @@ function Adminregister() {
 
           <div className='flex flex-col items-center'>
             <button type="submit" className='bg-blue-500 text-white p-2 rounded mb-2 w-full md:w-auto'>Submit</button>
-            <Link to='/somepath'><p className='text-blue-500'>Have an account? Login</p></Link>
+            <Link to='/admin/login'><p className='text-blue-500'>Have an account? Login</p></Link>
           </div>
         </form>
       </div>

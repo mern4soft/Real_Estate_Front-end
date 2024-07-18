@@ -1,7 +1,10 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 function Card(props) {
   const { data } = props;
+
 
   return (
     <div className="flex flex-wrap justify-center">
@@ -14,7 +17,7 @@ function Card(props) {
             <h1 className="text-xl font-semibold mb-2">{item.propertyName}</h1>
             <h2 className="text-lg font-medium mb-4">${item.propertyPrice}</h2>
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              More
+             <Link to={`details/${item._id}`}> More</Link>
             </button>
           </div>
         </div>

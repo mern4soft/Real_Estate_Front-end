@@ -19,6 +19,7 @@ import Agentregister from '../src/Agent/Agentregister';
 import Userregister from '../src/User/Userregister';
 import Landing from '../src/pages/Land';
 import { Dashboard } from './Admin/Dashboard';
+import PropertyDetails from './pages/PropertyDetails';
 
 
 
@@ -39,11 +40,13 @@ function App() {
           <Route path='property' element={<Property />} />
           <Route path='member' element={<Members />} />
           <Route path='buyer' element={<Buyer />} />
+          {/* <Route path='details/:id' element={<PropertyDetails/>}/> */}
         </Route>
         <Route path='/agent' element={<AgentLayout/>}>
           <Route path='dashboard' element={<AgentDashboard/>} />
           <Route path='property' element={<AgentProperty/>}/>
           <Route path='Communication' element={<AgentCommunication/>}/>
+          <Route path='details/:id' element={<PropertyDetails/>}/>
         
 
 
