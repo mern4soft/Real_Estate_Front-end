@@ -18,7 +18,7 @@ function Adminregister() {
   return (
     <div className='bg-cover h-screen w-screen flex justify-center items-center' style={{ backgroundImage: `url('https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg')` }}>
       <div className='backdrop-grayscale-0 bg-white/75 shadow-2xl w-full max-w-lg p-6 rounded-md'>
-        <h1 className='text-center text-2xl font-bold mb-4'>User Register</h1>
+        <h1 className='text-center text-2xl font-bold mb-4'>Admin Register</h1>
         <form className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
           <div className='flex flex-col md:flex-row md:gap-10'>
             <div className='mb-4 w-full'>

@@ -25,7 +25,7 @@ function UserLayout() {
     <Sidebar SidebarData={SidebarData} />
     
     <div className='flex flex-col w-screen'>
-        <NavbarSimple />
+        <div className='w-full h-[70px] bg-white shadow-2xl'></div>
         <div className='p-10 overflow-y-scroll height'>
 
             <Outlet />

@@ -24,13 +24,15 @@ function AgentLayout() {
 
 
     return (
+        
 
-        <div className='flex'>
+        <div className='flex h-screen'>
             <Sidebar SidebarData={SidebarData} />
             
             <div className='flex flex-col w-screen'>
-                <NavbarSimple />
-                <div className='p-10 overflow-y-scroll height'>
+                {/* <NavbarSimple /> */}
+                <div className='w-full h-[100px] bg-blue-gray-400 shadow-2xl'></div>
+                <div className='p-10 h-screen overflow-y-scroll '>
 
                     <Outlet />
 
